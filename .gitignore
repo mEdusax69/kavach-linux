@@ -1,0 +1,8 @@
+# large build artifacts - publish these as GitHub Release assets instead
+*.iso
+*.part*
+*.squashfs
+*.img
+live/
+rootfs/
+build/
