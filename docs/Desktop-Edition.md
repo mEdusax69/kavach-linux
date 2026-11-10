@@ -15,7 +15,7 @@ A graphical live Linux distribution with an XFCE desktop and a set of security a
 | Persistence | None. Changes are lost on reboot |
 | Live user | `kavach`, no password, passwordless `sudo` |
 
-The smaller command-line edition (`kavach-linux-1.0.iso`, 29 MB) is a separate project; see `Kavach-Linux-Documentation.md`.
+The smaller command-line edition (`kavach-linux-1.0.iso`, 29 MB) is a separate project; see [CLI-Edition.md](CLI-Edition.md).
 
 ---
 
@@ -115,11 +115,11 @@ ISO contents: `/casper/vmlinuz`, `/casper/initrd` (66 MB), `/casper/filesystem.s
 
 ## 4. Rebuilding it
 
-Files are in `desktop-build/`: `build-desktop.sh`, `chroot-setup.sh` (package list, theming, helper command), `grub.cfg`, `wallpaper.png`.
+Files are in `desktop/`: `build-desktop.sh`, `chroot-setup.sh` (package list, theming, helper command), `grub.cfg`, `wallpaper.png`.
 
 Requirements: root on Ubuntu 24.04, about 10 GB free disk, internet access, 1–2 hours depending on speed.
 ```bash
-sudo ./desktop-build/build-desktop.sh
+sudo ./desktop/build-desktop.sh
 ```
 **Honest caveat:** I produced the ISO by running these steps by hand and fixing problems as they appeared. `build-desktop.sh` collects those steps into one file, but I have not run it start-to-finish as a single script, so expect to fix small things if it errors. To add a tool, add its package name to the `apt-get install` list in `chroot-setup.sh`.
 
